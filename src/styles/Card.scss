@@ -1,0 +1,65 @@
+* {
+    font-size: large;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+// /* Define default light theme colors */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --input-border-color: black;
+    --card-background-color: #fff;
+    --card-border-color: black;
+    --search-icon-color: gray;
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+    --background-color: #212e37;
+    --text-color: white;
+    --input-border-color: white;
+    --card-background-color: #2a3b4c;
+    --card-border-color: white;
+    --search-icon-color: #c4c4c4;
+}
+
+.country-card {
+    /*border: 2px solid red;*/   
+    display: flex; /* Add this line to enable flexbox on the container */
+    justify-content: space-between; /* If you want some spacing between the two elements */
+    align-items: start; /* Aligns the items to the top */
+    padding: 1rem; /* Adds some spacing inside the card */
+}
+
+.country-info {
+    /*border: 5px solid green; */
+    flex: 1; /* This allows it to take the remaining space in the flex container */
+}
+
+.country-title {
+    /*border: 2px solid green; */
+}
+
+.country-details {
+    /*border: 3px solid black; */
+    flex: 1; /* This ensures the details take up equal width as the image */
+}
+
+.country-flag-inside {
+    /*border: 3px solid black; */
+    flex: 0.3; /* This gives the image a smaller proportion of the width */
+    margin-right: 1rem; /* Adds some spacing between the image and the details */
+}
+
+@media (max-width: 600px) {
+    .country-card {
+        flex-direction: column;
+    }
+
+    .country-flag-inside,
+    .country-info {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}

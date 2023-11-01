@@ -1,0 +1,295 @@
+// /* Define default light theme colors */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --input-border-color: black;
+    --card-background-color: #fff;
+    --card-border-color: black;
+    --search-icon-color: gray;
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+    --background-color: #212e37;
+    --text-color: white;
+    --input-border-color: white;
+    --card-background-color: #2a3b4c;
+    --card-border-color: white;
+    --search-icon-color: #c4c4c4;
+}
+
+/* Styles for the Page */
+
+* {
+    font-size: large;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.container {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.MuiAppBar-colorTransparent {
+    background-color: var(--background-color);
+}
+
+.MuiToolbar-root {
+    justify-content: space-between;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--search-icon-color);
+}
+
+.inputBase {
+    padding-left: 40px;
+    width: 60%;
+    // border: 1px solid var(--input-border-color);
+}
+
+.selectFilter {
+    margin-left: 1em;
+    flex-basis: 50px;
+}
+
+.tengah-atas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.dark-mode-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.materi-isi {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2em; 
+    padding: 2em 0;
+}
+
+.country-card-luar {
+    background-color: var(--card-background-color);
+    border-radius: 5px;
+    // border: 1px solid var(--card-border-color);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+}
+
+.country-flag {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.country-details {
+    padding: 1em;
+    font-family: 'Nunito Sans', sans-serif;
+
+    p, h3 {
+        text-decoration: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .MuiToolbar-root {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; 
+    }
+
+    .selectFilter {
+        height: 30px; 
+        padding: 0 0.5em; 
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8em; 
+    }
+
+    .inputBase {
+        width: 300px;
+        // border: 1px solid var(--input-border-color);
+    }
+
+    .tengah-atas {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; 
+    }
+
+    .dark-mode-switch {
+        align-self: flex-end; 
+    }
+
+    .materi-isi {
+        .country-card {
+            width: 80%;  
+            margin: 0 auto;  
+            padding: 10px;  
+
+            img {
+                width: 100%;  
+                height: auto;  
+            }
+
+            .country-details {
+                h3 {
+                    font-size: 1.2em;  
+                }
+
+                p {
+                    font-size: 1em;  
+                }
+            }
+        }
+    }
+}
+
+
+// /* Styles for the Page */
+
+// .MuiAppBar-colorTransparent {
+//     background-color: white;
+// }
+
+// .MuiToolbar-root {
+//     justify-content: space-between;
+// }
+
+// .searchIcon {
+//     position: absolute;
+//     left: 10px;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     color: gray;
+// }
+
+// .inputBase {
+//     padding-left: 40px;
+//     width: 60%;
+//     border: 1px solid black;
+
+// }
+
+// .selectFilter {
+//     margin-left: 1em;
+//     flex-basis: 50px;
+// }
+
+// .tengah-atas {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 1em;
+// }
+
+// .dark-mode-switch {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px; /* This will give a small space between the icon and button */
+// }
+
+// .materi-isi {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+//     gap: 2em; 
+//     padding: 2em 0;
+//   }
+  
+//   .country-card-luar {
+//     background-color: #fff;
+//     border-radius: 5px;
+//     border:1px solid black;
+//     overflow: hidden;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     transition: transform 0.2s;
+  
+//     &:hover {
+//       transform: translateY(-5px);
+//     }
+//   }
+  
+//   .country-flag {
+//     width: 100%;
+//     height: 160px;
+//     object-fit: cover;
+//   }
+  
+//   .country-details {
+//     padding: 1em;
+//   }
+
+
+
+// @media (max-width: 600px) {
+//     .MuiToolbar-root {
+//         flex-direction: column;
+//         align-items: flex-start;
+//         gap: 10px; /* Adds a gap between items when in column layout */
+//     }
+
+//     .selectFilter {
+//         height: 30px; /* Further reduced height */
+//         padding: 0 0.5em; /* Reduced padding */
+//         align-items: center;
+//         display: flex;
+//         justify-content: space-between;
+//         font-size: 0.8em; /* If you want to reduce font size too */
+//     }
+
+//     .inputBase {
+//         width: 300px;
+//         border: 1px solid black;
+    
+//     }
+
+//     .tengah-atas {
+//         flex-direction: column;
+//         align-items: flex-start;
+//         gap: 10px; /* Space between the search bar and the dropdown */
+//     }
+
+//     .dark-mode-switch {
+//         align-self: flex-end; /* This will push the dark mode switch to the right edge */
+//     }
+
+//  .materi-isi {
+//     .country-card {
+//         width: 80%;  /* Reduce width for smaller screens */
+//         margin: 0 auto;  /* Center the card */
+//         padding: 10px;  /* Adjust padding */
+  
+//         img {
+//           width: 100%;  /* Make image take the full width of the card */
+//           height: auto;  /* Adjust height accordingly */
+//         }
+  
+//         .country-details {
+//           h3 {
+//             font-size: 1.2em;  /* Adjust font size */
+//           }
+  
+//           p {
+//             font-size: 1em;  /* Adjust font size */
+//           }
+//         }
+//       }
+//  }
+// }

@@ -1,0 +1,28 @@
+{
+  "favorites": [
+    {
+      "image": "https://flagcdn.com/w320/mw.png",
+      "Name": "Malawi",
+      "capital": "Lilongwe",
+      "population": "19,129,955",
+      "region": "Africa",
+      "id": 1
+    },
+    {
+      "image": "https://flagcdn.com/w320/mr.png",
+      "Name": "Mauritania",
+      "capital": "Nouakchott",
+      "population": "4,649,660",
+      "region": "Africa",
+      "id": 3
+    },
+    {
+      "image": "https://flagcdn.com/w320/tc.png",
+      "Name": "Turks and Caicos Islands",
+      "capital": "Cockburn Town",
+      "population": "38,718",
+      "region": "Americas",
+      "id": 4
+    }
+  ]
+}
